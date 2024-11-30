@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- --------- UNICONS ---------- -->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+    <!-- --------- CSS ---------- -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>Data Jobs Presentation</title>
+</head>
+<body>
+    <!-- - - - - - ENTIRE WEBSITE div - - - - - -->
+   <div class="container">
+    <!-- -------------- MAIN ---------------- -->
+    <main class="wrapper">
+       <!-- -------------- FEATURED BOX ---------------- -->
+       <section class="section" id="top">
+            <div class="title-box">
+            <div class="title">
+                <p>Programming Language Mentions Analysis</span></p>
+            </div>
+            <div class="title-by">
+                <p>
+                    by: Joshua Conklin
+                </p>
+            </div>
+            <div class="row">
+                <div class="skills-text">
+                    <p>Tools:
+                    </p>
+                </div>
+                <div class="skills-list-row">
+                    <span>SQL</span>
+                    <span>Azure Studio</span>
+                    <span>Tableau</span>
+                    <span>Microsoft SQL Server</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="skills-text">
+                    <p>Skills:
+                    </p>
+                </div>
+                <div class="skills-list-row">
+                    <span>databases</span>
+                    <span>storytelling</span>
+                    <span>visualization</span>
+                    <span>big data</span>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <a href="#tableaupres" class="btn orange-btn">View Tableau Presentation</a>
+            </div>
+            <div class="social_icons_right">
+                <a href="https://github.com/joshuaconk14/Data_Jobs_Project" target="_blank" class="icon">
+                    <i class="uil uil-github-alt"></i>
+                </a>
+                <a href="files/Data_Jobs_Tableau_Story.pdf" target="_blank" class="icon">
+                    <i class="uil uil-external-link-alt"></i>
+                </a>
+            </div>
+        </section>
+        <!-- -------------- SUMMARY BOX ---------------- -->
+        <section class="section">
+            <div class="top-header">
+                <h1>Project Summary</h1>
+                <div class="summary-info">
+                    <div class="row">
+                        <div class="summary-col-size">
+                            <h3>Goal</h3>
+                                <p> The Programming Language Mentions Analysis Project aims to provide a comprehensive analysis of job postings in the data sector, focusing on the programming languages required and job classifications. 
+                                    By leveraging data from Glassdoor, the project seeks to identify the most commonly used programming languages in data roles, classifing job titles into relevant categories.
+                                    The graphs will illustrate the prevalence of specific programming languages in job postings, enabling users to understand the skills in demand.
+                                </p>
+                        </div>
+                        <div class="summary-col-size">
+                            <h3>Process</h3>
+                                <p> First I identified a <span>Kaggle</span> source that displayed 742 data job descriptions from Glassdoor job openings. Then, I downloaded the CSV file and inputted it into a <span>SQL</span> database using
+                                    <span>Microsoft SQL Service</span> to run the database on a server and <span>Azure Studio</span> to make edits to the data. In Azure, I edited the data, eliminated null values, and separated the job descriptions into different job title columns. Once that
+                                    was done, I connected my updated SQL database into <span>Tableau</span> and created graphs and storyboards to display and analyze the data.
+                        </div>
+                        <div class="summary-col-size">
+                            <h3>Highlights</h3>
+                                <p> The project was mainly ran on <span>SQL</span> and used <span>Azure Studio</span> to create a server that will run the database. The CSV file was edited and cleaned in <span>SQL</span>
+                                    in order to obtain the most accurate information for this project. 
+                                </p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img class="stock-photo" src = "pictures/jobs_stock_photo.png" alt="avatar">
+                </div>
+            </div>
+        </section>
+       <!-- -------------- EXPLANATION BOX ---------------- -->
+       <section class="section" id="explanation">
+          <div class="data-source-box">
+              <h3>Data source</h3>
+              <div class="steps-text">
+                <p>
+                    Here is the datasource that I used from Kaggle containing the Glassdoor data jobs info:
+                  </p>
+              </div>
+              <div>
+                  <a href="proj_data/Glassdoor_Salary_Cleaned_Version.csv" target="_blank">Download Original Data Jobs CSV from Kaggle</a>
+              </div>
+          </div>
+          <div class="sql-container">
+            <div class = "top-header">
+                <h1>SQL steps</h1>
+            </div>
+            <div class="steps-text">
+                <p> This is the code that I used in SQL in order to create the table with the information that I needed to create the Tableau storyboard.
+                </p>
+                <p>
+                With the original "Glassdoor Salary Cleaned Version", I inputted the CSV file into SQL. Firstly, I wanted to cateogize each job into four classifications: Data Scientist, Data Engineer, Data Scientist, and Manager of Data.
+                Then, I added a column called "Job_Title_Classification" which would contain a drop-down menu for these job classifications.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_one.png" alt="avatar">
+                </div>
+                <p>
+                    After that, I added new columns at the end of the table for each Programming Language I planned on searching for. These columns would contain
+                    binary values with 1 meaning "yes" and that programming language is mentioned in the corresponding job description, and 0 meaning "no" abd that
+                    programming language is not mentioned in the corresponding job description.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_two.png" alt="avatar">
+                </div>
+                <p>
+                    For the binary columns, the code below allowed me to query through the job descriptions and set 1, or "yes", if the programming language is mentioned,
+                    and vice versa. Different versions of the prog language name was added in order to obtain the most accurate results.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_three.png" alt="avatar">
+                </div>
+                <p>
+                    I did the rest for C, Javascript, Swift, Golang, MATLAB, SAS, and Pandas.
+                </p>
+                <div class="data-box-padding">
+                    <div class="data-source-box">
+                        <h3>Modified data source</h3>
+                        <p>
+                            Here is the modified Glassdoor data jobs table after performing all the previous SQL code:
+                        </p>
+                        <div>
+                            <a href="proj_data/Glassdoor_Djobs_modified_byme.csv" target="_blank">Download Modified Data Jobs CSV</a>
+                        </div>
+                    </div>
+                </div>
+                <p>
+                    Next, I extracted the sum of all the binary columns, respectively, and placed them into a new table called "Prog_Lang_Mentions". I also converted the program language names from
+                    being in columns to being in rows for a more readable table.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_four.png" alt="avatar">
+                </div>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_five.png" alt="avatar">
+                </div>
+                <p>
+                    Finally, I created columns specified to each of the three types of data jobs (I excluded manager of data since there were an insufficient amount of roles for that job classification), providing the amount of times 
+                    they mentioned each programming language as well as the percentages.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_six.png" alt="avatar">
+                </div>
+                <div>
+                    <img class="process-img-size" src = "pictures/datajobs_process_seven.png" alt="avatar">
+                </div>
+                <p class="final-table-text">
+                    Here is the final table that I ended up using for the <span>Tableau</span> storyboard.
+                </p>
+                <div>
+                    <img class="process-img-size" src = "pictures/Prog_Lang_Count_table.png" alt="avatar">
+                </div>
+            </div>
+        </div>
+       </section>
+
+       <!-- ----- TABLEAU PRESENTATION ----- -->
+
+       <section class="section" id="tableaupres">
+        <div class="top-header">
+            <h1>Tableau presentation</h1>
+        </div>
+        <div class="steps-text">
+            <p>
+                Here is the complete Tableau storyboard for the project, with <span>analysis</span> and <span>summary</span> displayed within it:
+            </p>
+            <div>
+                <img class="process-img-size" src = "pictures/djobs_tableau_SS_1.png" alt="avatar">
+                <img class="process-img-size" src = "pictures/djobs_tableau_SS_2.png" alt="avatar">
+            </div>
+        </div>
+        <div class="nav-btn">
+            <a href="#top" class="btn orange-btn centering">Back to top</a>
+        </div>
+       </section>
+
+    </div>
+
+
+
+       <!-- ----- SCROLL REVEAL JS Link----- -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- ----- MAIN JS ----- -->
+    <script src="main.js"></script>
+
+    
+</body>
+</html>
