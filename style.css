@@ -99,7 +99,7 @@ body{
 
 /* ----- MAIN BOX ----- */
 .section{
-    padding-block: 1em;
+    padding-block: 0em;
 }
 .row{
     display: flex;
