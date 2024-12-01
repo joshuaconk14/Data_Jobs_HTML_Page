@@ -139,7 +139,7 @@ h3{
     display: flex;
     justify-content: center; /* x-axis alignment */
     align-content: center; /* y-axis alignment */
-    min-height: 80vh;
+    min-height: 60vh;
     flex-direction: column;
     width: 50%;
     padding-left: 20px;
@@ -168,7 +168,7 @@ h3{
 }
 .social_icons, .social_icons_right{
     display: flex;
-    margin-top: 3.5em;
+    margin-top: 2.5em;
     gap: 30px;
 }
 .icon{
